@@ -1,0 +1,175 @@
+.container-history {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+    display: flex;
+
+    .text-history {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 30%;
+        display: flex;
+        font-family: 'Yuji Boku', serif;
+
+        p {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 400;
+            animation: pulse 1s;
+            line-height: 35px;
+            z-index: 999;
+        }
+
+        span {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 50px;
+        }
+
+        p:nth-child(1) {
+            order: 4;
+            animation-delay: 1.1s;
+            margin: 0 auto;
+        }
+
+        p:nth-child(2) {
+            order: 3;
+            animation-delay: 1.2s;
+            margin: 0 auto;
+        }
+
+        p:nth-child(3) {
+            order: 2;
+            animation-delay: 1.3s;
+            margin: 0 auto;
+        }
+
+        p:nth-child(4) {
+            order: 1;
+            animation-delay: 1.4s;
+            margin: 0 auto;
+
+            .Contact-button {
+                color: #ffd700;
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: 4px;
+                font-family: 'Coolvetica';
+                text-decoration: none;
+                padding: 10px 18px;
+                border: 1px solid #ffd700;
+                line-height: 80px;
+                text-orientation: upright;
+                animation: fadeInAnimation 1s 1.8s backwards;
+                white-space: nowrap;
+
+                &:hover {
+                    background: #ffd700;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1510px) {
+    .container-history {
+        .text-history {
+            display: grid;
+            grid-template-rows: 500px 500px;
+            grid-template-columns: 50% 50%;
+
+            p:nth-child(1) {
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+            }
+
+            p:nth-child(2) {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                margin-right: 130px;
+            }
+
+            p:nth-child(3) {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+
+            p:nth-child(4) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+
+                .Contact-button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1120px) {
+    .container-history {
+
+        .text-history {
+            display: grid;
+            grid-template-rows: repeat(4, 500px);
+            grid-template-columns: 100%;
+
+            span {
+                font-size: 30px;
+            }
+
+            p:nth-child(1) {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                line-height: 60px;
+            }
+
+            p:nth-child(2) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+                line-height: 40px;
+                margin: 0 auto;
+            }
+
+            p:nth-child(3) {
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+                line-height: 35px;
+            }
+
+            p:nth-child(4) {
+                grid-row: 4 / 5;
+                grid-column: 1 / 2;
+                line-height: 35px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+
+    .container-history {
+
+        .text-history {
+
+            p:nth-child(3) {
+                font-size: 18px;
+                line-height: 8vw;
+            }
+
+            p:nth-child(4) {
+                font-size: 14px;
+                line-height: 5vw;
+            }
+        }
+    }
+}

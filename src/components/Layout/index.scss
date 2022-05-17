@@ -1,0 +1,28 @@
+.page {
+  width: calc(100% - 60px);
+  right: 0;
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+
+.tags {
+  position: absolute;
+  color: #21fc6a;
+  opacity: 0.6;
+  width: 100%;
+  font-size: 60px;
+  top: 2%;
+  text-align: center;
+}
+
+.text-zone {
+  position: absolute;
+  top: 15%;
+  font-size: 50px;
+  width: 100%;
+  font-family: 'Coolvetica';
+  color: #ffd700;
+  font-weight: 400;
+  text-align: center;
+}

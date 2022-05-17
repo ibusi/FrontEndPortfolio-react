@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  font: 300 11px/1.4, sans-serif;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  height: -webkit-fill-available;
+  background: #014f87;
+}

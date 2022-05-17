@@ -1,0 +1,240 @@
+.container-contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: .5s;
+
+  .contact-text {
+    position: absolute;
+    width: 63%;
+    height: 70%;
+    left: 0;
+    top: 28%;
+    animation: pulse 4s;
+    display: block;
+
+    .container-text {
+      position: absolute;
+      right: 0;
+      width: 45%;
+      display: flex;
+      align-items: center;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      align-items: center;
+      top: 0;
+
+      p {
+        font-size: 17px;
+        margin: 0;
+        color: #fff;
+        font-family: 'Yuji Boku', serif;
+        font-weight: 500;
+        line-height: 300%;
+      }
+    }
+
+    form {
+      position: absolute;
+      width: 55%;
+      height: 10%;
+
+      .contact-form {
+        position: absolute;
+        top: 200%;
+        margin-left: 10%;
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6%;
+
+        li {
+          width: 100%;
+          margin-bottom: 2%;
+          opacity: 0;
+          animation: fadeInUp 2s 2s;
+          animation-fill-mode: forwards;
+
+          input {
+            width: 100%;
+            height: 100%;
+            border: 0px;
+            box-sizing: border-box;
+          }
+        }
+
+        li.half {
+          width: 47%;
+
+          input {
+            padding: 0px;
+            padding-left: 4%;
+          }
+        }
+      }
+
+      .subject {
+
+        input {
+          padding-left: 2%;
+        }
+      }
+
+      .textzone {
+        margin-top: 1%;
+
+        textarea {
+          width: 100%;
+          padding: 2%;
+          border: 0;
+          background: white;
+          font-size: 16px;
+          color: black;
+          box-sizing: border-box;
+          min-height: 120px;
+        }
+      }
+
+      .flat-button {
+        margin-left: auto;
+        width: 20% !important;
+        border: 2px solid #ffd700;
+        border-radius: 5%;
+        text-transform: uppercase;
+        padding: 1px 1px;
+        cursor: pointer;
+        height: 20%;
+        text-align: center;
+
+        &:hover {
+          background: #ffd700;
+
+        }
+
+        input {
+          color: #ffd700;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          background-color: #014f87;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .map-wrap {
+    position: absolute;
+    width: 37%;
+    height: 100%;
+    right: 0;
+
+    .leaflet-container {
+      position: absolute;
+      margin-right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: backInRight 1s 1.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.info-map {
+  position: fixed;
+  background: #000;
+  top: 50px;
+  right: 7vw;
+  width: 16vw;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  z-index: 99;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+}
+
+
+
+@media(max-width: 1060px) {
+
+  .container-contact {
+
+    .contact-text {
+      width: 100%;
+      top: 60%;
+      height: 38%;
+
+      .container-text {
+        top: 0;
+
+        p {
+          font-size: 14px;
+          line-height: 4vw;
+        }
+      }
+
+      form {
+
+        .contact-form {
+          top: 0;
+          margin-left: 3%;
+
+          li {
+            height: 10%;
+          }
+        }
+      }
+    }
+
+    .map-wrap {
+      top: 28%;
+      width: 100%;
+      height: 25%;
+    }
+  }
+
+  .info-map {
+    display: none;
+  }
+}
+
+@media(max-width: 500px) {
+
+  .contact-text {
+    form {
+      .contact-form {
+        li {
+          input {
+            font-size: 7px;
+          }
+        }
+
+        .textzone {
+          margin-top: 2%;
+
+          textarea {
+            font-size: 7px;
+          }
+        }
+      }
+    }
+  }
+}

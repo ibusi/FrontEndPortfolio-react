@@ -1,0 +1,157 @@
+.container-about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+
+  .text-about {
+    position: absolute;
+    width: 60%;
+    top: 27%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 500;
+      font-family: 'Yuji Boku', serif;
+      animation: pulse 1s;
+      line-height: 4vw;
+    }
+  }
+
+  .history-button {
+    color: #ffd700;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: 'Coolvetica';
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #ffd700;
+    line-height: 80px;
+    text-orientation: upright;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background: #ffd700;
+      color: #333;
+    }
+  }
+
+  .stage-cube-cont {
+    width: 400px;
+    height: 400px;
+    top: 28%;
+    position: absolute;
+    right: 300px;
+  }
+
+  .cubespinner {
+    animation-name: spincube;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    transform-style: preserve-3d;
+    transform-origin: 70%;
+
+    div {
+      position: absolute;
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 500px;
+      padding: 0;
+    }
+
+
+
+    .face2 {
+      transform: rotateY(45deg)
+    }
+
+    .face3 {
+      transform: rotateY(90deg)
+    }
+
+    .face4 {
+      transform: rotateY(125deg)
+    }
+  }
+}
+
+@keyframes spincube {
+
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateX(45deg) rotateY(180deg) rotateZ(20deg);
+  }
+}
+
+@media(max-width: 1510px) {
+
+  .stage-cube-cont {
+    margin-right: -160px;
+  }
+
+  @keyframes spincube {
+
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    50% {
+      transform: rotateY(130deg);
+    }
+  }
+}
+
+@media(max-width: 1260px) {
+  .stage-cube-cont {
+    display: none;
+  }
+
+  .container-about {
+    .text-about {
+      width: 100%;
+
+      p {
+        line-height: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .container-about {
+
+    .history-button {
+      display: none;
+    }
+
+    .text-about {
+      width: 100%;
+
+      p {
+        line-height: 7vw;
+        font-size: 15px;
+      }
+    }
+  }
+}
