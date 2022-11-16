@@ -9,7 +9,7 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = ['と', '申', 'し', 'ま', 'す', '。']
-  const nameArray2 = ['フ', 'ロ', 'ン', 'ト', 'エ', 'ン', 'ド']
+  const nameArray2 = ['サ', 'ー', 'バ', 'ー']
   const jobArray = ['エ', 'ン', 'ジ', 'ニ', 'ア']
   const jobArray2 = ['目', '指', 'し', 'て', 'い', 'ま', 'す', '。']
 
